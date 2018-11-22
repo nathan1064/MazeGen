@@ -30,5 +30,11 @@ namespace MazeGen
         {
             Graphics paper = pictureBox1.CreateGraphics(); //Initialize the graphics object "paper"
         }
+
+        //"Solve Maze" button click event
+        private void buttonSolve_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

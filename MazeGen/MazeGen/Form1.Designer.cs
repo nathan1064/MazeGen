@@ -62,6 +62,7 @@
             this.buttonSolve.TabIndex = 2;
             this.buttonSolve.Text = "Solve Maze";
             this.buttonSolve.UseVisualStyleBackColor = true;
+            this.buttonSolve.Click += new System.EventHandler(this.buttonSolve_Click);
             // 
             // buttonClear
             // 
