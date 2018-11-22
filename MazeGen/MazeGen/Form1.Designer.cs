@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonGenerate = new System.Windows.Forms.Button();
             this.buttonSolve = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox
+            // pictureBox1
             // 
-            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(800, 800);
-            this.pictureBox.TabIndex = 0;
-            this.pictureBox.TabStop = false;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(800, 800);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // buttonGenerate
             // 
@@ -70,6 +70,7 @@
             this.buttonClear.TabIndex = 3;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // Form1
             // 
@@ -79,17 +80,17 @@
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonSolve);
             this.Controls.Add(this.buttonGenerate);
-            this.Controls.Add(this.pictureBox);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "MazeGen";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonGenerate;
         private System.Windows.Forms.Button buttonSolve;
         private System.Windows.Forms.Button buttonClear;

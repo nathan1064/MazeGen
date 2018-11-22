@@ -16,5 +16,10 @@ namespace MazeGen
         {
             InitializeComponent();
         }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Refresh();
+        }
     }
 }
