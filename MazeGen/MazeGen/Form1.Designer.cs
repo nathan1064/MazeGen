@@ -52,6 +52,7 @@
             this.buttonGenerate.TabIndex = 1;
             this.buttonGenerate.Text = "Generate Maze";
             this.buttonGenerate.UseVisualStyleBackColor = true;
+            this.buttonGenerate.Click += new System.EventHandler(this.buttonGenerate_Click);
             // 
             // buttonSolve
             // 
