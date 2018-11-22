@@ -15,6 +15,8 @@ namespace MazeGen
         public Form1()
         {
             InitializeComponent();
+
+            Graphics paper = pictureBox1.CreateGraphics(); //Initialize the graphics object "paper"
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
