@@ -60,9 +60,6 @@ namespace MazeGen
         private void buttonGenerate_Click(object sender, EventArgs e)
         {
             Graphics paper = pictureBox1.CreateGraphics(); //Initialize the graphics object "paper"
-            Maze testMaze = new Maze(mazeSize);
-
-            DrawInverseMaze(testMaze, paper);
         }
 
         //"Solve Maze" button click event
