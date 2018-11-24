@@ -20,22 +20,34 @@ namespace MazeGen
         }
     }
 
+
     //The Maze class to store a maze, and methods for both maze generation and solving
     public class Maze
     {
-        //A boolean adjacency list which tells us if a cell is connected to the cell left of or below itself
-        public bool[,,] adjacencyList = new bool[20,20,2];
+        public bool[,,] adjacencyList; //A boolean adjacency list which tells us if a cell is connected to the cell to the right of or below itself
+        public int size; //A size parameter so size is recorded on a per maze basis
 
-        public Maze()
+        public Maze(int mazeSize)
         {
+            size = mazeSize;
+            adjacencyList = new bool[mazeSize, mazeSize, 2];
+
             //Initialize all cells as connected
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < mazeSize; i++)
             {
-                for (int j = 0; j < 20; j++)
+                for (int j = 0; j < mazeSize; j++)
                 {
                     adjacencyList[i, j, 0] = true;
                     adjacencyList[i, j, 1] = true;
                 }
+            }
+            for (int i = 0; i < mazeSize; i++)
+            {
+                adjacencyList[i, 19, 1] = false;
+            }
+            for (int j = 0; j < mazeSize; j++)
+            {
+                adjacencyList[19, j, 0] = false;
             }
         }
     }
