@@ -22,9 +22,25 @@ namespace MazeGen
                 for (int j = 0; j < maze.size; j++)
                 {
                     if (maze.adjacencyList[i, j, 0])
-                        paper.DrawLine(defaultPen, (800/maze.size) * i + 40, (800 / maze.size) * j + 40, (800 / maze.size) * (i + 1) + 40, (800 / maze.size) * j + 40);
+                        paper.DrawLine(defaultPen, (800 / maze.size) * i + 40, (800 / maze.size) * j + 40, (800 / maze.size) * (i + 1) + 40, (800 / maze.size) * j + 40);
                     if (maze.adjacencyList[i, j, 1])
                         paper.DrawLine(defaultPen, (800 / maze.size) * i + 40, (800 / maze.size) * j + 40, (800 / maze.size) * i + 40, (800 / maze.size) * (j + 1) + 40);
+                }
+            }
+        }
+
+        void DrawMaze(Maze maze, Graphics paper)
+        {
+            paper.DrawRectangle(defaultPen, 20, 20, 800, 800);
+
+            for (int i = 0; i < maze.size; i++)
+            {
+                for (int j = 0; j < maze.size; j++)
+                {
+                    if (!maze.adjacencyList[i, j, 0])
+                        paper.DrawLine(defaultPen, 20 + (800 / maze.size) * (i + 1), 20 + (800 / maze.size) * j, 20 + (800 / maze.size) * (i + 1), 20 + (800 / maze.size) * (j + 1));
+                    if (!maze.adjacencyList[i, j, 1])
+                        paper.DrawLine(defaultPen, 20 + (800 / maze.size) * i, 20 + (800 / maze.size) * (j + 1), 20 + (800 / maze.size) * (i + 1), 20 + (800 / maze.size) * (j + 1));
                 }
             }
         }
@@ -46,7 +62,7 @@ namespace MazeGen
             Graphics paper = pictureBox1.CreateGraphics(); //Initialize the graphics object "paper"
             Maze testMaze = new Maze(mazeSize);
 
-            DrawInverseMaze(testMaze, paper);
+            DrawMaze(testMaze, paper);
         }
 
         //"Solve Maze" button click event
