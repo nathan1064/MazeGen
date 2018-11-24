@@ -25,7 +25,7 @@ namespace MazeGen
     public class Maze
     {
         public bool[,,] adjacencyList; //A boolean adjacency list which tells us if a cell is connected to the cell to the right of or below itself
-        public float size; //A size parameter so size is recorded on a per maze basis
+        public int size; //A size parameter so size is recorded on a per maze basis
 
         public Maze(int mazeSize)
         {
@@ -43,11 +43,11 @@ namespace MazeGen
             }
             for (int i = 0; i < mazeSize; i++)
             {
-                adjacencyList[i, 19, 1] = false;
+                adjacencyList[i, mazeSize - 1, 1] = false;
             }
             for (int j = 0; j < mazeSize; j++)
             {
-                adjacencyList[19, j, 0] = false;
+                adjacencyList[mazeSize - 1, j, 0] = false;
             }
         }
     }
