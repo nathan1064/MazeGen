@@ -20,12 +20,15 @@ namespace MazeGen
         }
     }
 
+    //The Maze class to store a maze, and methods for both maze generation and solving
     public class Maze
     {
+        //A boolean adjacency list which tells us if a cell is connected to the cell left of or below itself
         public bool[,,] adjacencyList = new bool[20,20,2];
 
         public Maze()
         {
+            //Initialize all cells as connected
             for (int i = 0; i < 20; i++)
             {
                 for (int j = 0; j < 20; j++)
