@@ -40,31 +40,33 @@
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(800, 800);
+            this.pictureBox1.Size = new System.Drawing.Size(840, 840);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // buttonGenerate
             // 
-            this.buttonGenerate.Location = new System.Drawing.Point(203, 839);
+            this.buttonGenerate.Location = new System.Drawing.Point(226, 875);
             this.buttonGenerate.Name = "buttonGenerate";
             this.buttonGenerate.Size = new System.Drawing.Size(96, 23);
             this.buttonGenerate.TabIndex = 1;
             this.buttonGenerate.Text = "Generate Maze";
             this.buttonGenerate.UseVisualStyleBackColor = true;
+            this.buttonGenerate.Click += new System.EventHandler(this.buttonGenerate_Click);
             // 
             // buttonSolve
             // 
-            this.buttonSolve.Location = new System.Drawing.Point(365, 839);
+            this.buttonSolve.Location = new System.Drawing.Point(388, 875);
             this.buttonSolve.Name = "buttonSolve";
             this.buttonSolve.Size = new System.Drawing.Size(96, 23);
             this.buttonSolve.TabIndex = 2;
             this.buttonSolve.Text = "Solve Maze";
             this.buttonSolve.UseVisualStyleBackColor = true;
+            this.buttonSolve.Click += new System.EventHandler(this.buttonSolve_Click);
             // 
             // buttonClear
             // 
-            this.buttonClear.Location = new System.Drawing.Point(527, 839);
+            this.buttonClear.Location = new System.Drawing.Point(550, 875);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(96, 23);
             this.buttonClear.TabIndex = 3;
@@ -76,7 +78,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 886);
+            this.ClientSize = new System.Drawing.Size(862, 920);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonSolve);
             this.Controls.Add(this.buttonGenerate);
