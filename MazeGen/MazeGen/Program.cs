@@ -41,6 +41,8 @@ namespace MazeGen
                     adjacencyList[i, j, 1] = true;
                 }
             }
+
+            //Remove connections to invalid cells
             for (int i = 0; i < mazeSize; i++)
             {
                 adjacencyList[i, mazeSize - 1, 1] = false;

@@ -12,9 +12,10 @@ namespace MazeGen
 {
     public partial class Form1 : Form
     {
-        const int mazeSize = 20;
+        const int mazeSize = 20; //A place holder constant(To be replaced with user input)
         Pen defaultPen = new Pen(Color.Black, 3);
 
+        //This function draws lines between the centers of connected cells, resulting in a visualization similar to a traditional graph
         void DrawInverseMaze(Maze maze, Graphics paper)
         {
             for (int i = 0; i < maze.size; i++)
@@ -29,6 +30,7 @@ namespace MazeGen
             }
         }
 
+        //This function draws the walls of a maze
         void DrawMaze(Maze maze, Graphics paper)
         {
             paper.DrawRectangle(defaultPen, 20, 20, 800, 800);
